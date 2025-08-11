@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>AI Prompting Mastery - Courses</title>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-black text-gray-200 flex flex-col min-h-screen font-sans antialiased">
+    <!-- Header -->
+    <header class="bg-black border-b border-gray-800">
+        <div class="container mx-auto px-4 py-6 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <i data-lucide="brain-circuit" class="w-8 h-8 text-red-600"></i>
+                <h1 class="text-2xl font-bold text-red-600">Courses</h1>
+            </div>
+             <nav class="hidden md:flex space-x-6">
+                <a href="/" class="text-gray-300 hover:text-red-600 transition-colors">Home</a>
+                <a href="/course.html" class="text-gray-300 hover:text-red-600 transition-colors">Courses</a>
+                <a href="https://flow.bytarch.dpdns.org/" class="text-gray-300 hover:text-red-600 transition-colors">Flow</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Courses Section (always visible) -->
+    <main id="courses" class="flex-grow container mx-auto px-4 py-12">
+        <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-red-600 mb-4">Courses</h3>
+            <p class="text-gray-400 max-w-2xl mx-auto">Start your AI prompting journey with our carefully crafted courses</p>
+        </div>
+
+        <div class="grid gap-8 grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto">
+            <!-- Beginner Course -->
+            <div class="bg-gray-900 rounded-xl shadow-lg overflow-hidden hover:shadow-red-800 transition-shadow">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <i data-lucide="zap" class="w-6 h-6 text-yellow-400 mr-2"></i>
+                        <span class="bg-yellow-800 text-yellow-200 text-xs px-2 py-1 rounded-full">Beginner</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">AI Prompting Fundamentals</h4>
+                    <p class="text-gray-400 mb-4">Learn the basics of communicating with AI, understanding how prompts work, and getting started with simple but effective techniques.</p>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-sm text-gray-500">6 lessons • Quiz</span>
+                        <span class="text-sm text-gray-500">Free</span>
+                    </div>
+                    <button onclick="navigateToCourse('fundamentals')" class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition-colors">Start Course</button>
+                </div>
+            </div>
+            <!-- Vibe Coding Course -->
+            <div class="bg-gray-900 rounded-xl shadow-lg overflow-hidden hover:shadow-pink-800 transition-shadow">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <i data-lucide="music" class="w-6 h-6 text-pink-500 mr-2"></i>
+                        <span class="bg-pink-800 text-pink-200 text-xs px-2 py-1 rounded-full">Intermediate</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Vibe Coding Mastery</h4>
+                    <p class="text-gray-400 mb-4">Explore advanced prompting strategies to capture tone and style in your code, and learn to craft prompts that resonate with your target vibe.</p>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-sm text-gray-500">4 lessons • Quiz</span>
+                        <span class="text-sm text-gray-500">Free</span>
+                    </div>
+                    <button onclick="navigateToCourse('vibe')" class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition-colors">Start Course</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="courseContainer" class="hidden flex-grow"></div>
+    <div id="backButton" class="hidden container mx-auto px-4 py-4">
+        <button onclick="backToCourses()" class="flex items-center text-red-600 hover:text-red-700 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i>Back to Courses
+        </button>
+    </div>
+
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/footer.js"></script>
+</body>
+</html>
